@@ -59,7 +59,7 @@ void events(int diff)
             while(true)
             {
                 cin>>pay;
-                if(pay<money.val)
+                if(pay>money.val)
                     cout<<" # Not enough money \n > ";
                 else
                 {
@@ -166,7 +166,7 @@ void fbuild(building optiuniCladiri[][3],int answer,int &schimb,int x)
             {
                 cout<<" # Do you want to replace an already existing building? This wont refund the destroyed building's cost.(Y/N) \n > ";
                 cin>>repl;
-                toupper(repl);
+                repl=toupper(repl);
             }
             if(repl=='Y')
             {
@@ -238,7 +238,7 @@ void introductie()
 {
     cout<<" - Your goal is to create a fully sustainable city \n - each citizen consumes 1 food per year, if there isn't enough food for everyone the people without food will leave town, people move in every year based on the overall happiness \n";
     cout<<" - People will constantly loose happiness, if their happiness is too low some of them will leave town, people become more unhappy during disasters \n";
-    cout<<" - Occasionally random events will appear, those are mostly negative things that make the game harder, there are 3 types of random events\n 1. Normal Events: They won't straight up loose you the game if left unattended and are easy to resolve \n 2. Disasters: Will loose you the game if left unattended \n     - Require you to allocate large amounts of resources to guarantee they are resolved \n     - You may spend less money in order to have a random chance of resolving them \n 3. Extreme Events: Events that will loose you the game if not resolved immediately \n     - Take an absurd amount of resources to guarantee they are fixed \n     - You could pay less for a chance at completing them but you will also receive a permanent negative side effect \n";
+    cout<<" - Occasionally random events will appear, those are mostly negative things that make the game harder, there are 3 types of random events\n 1. Normal Events: They won't straight up loose you the game if left unattended and are easy to resolve \n 2. Disasters: Will loose you the game if left unattended \n     - Require you to allocate large amounts of resources to guarantee they are resolved \n     - You may spend less money in order to have a random chance of resolving them \n ";
     cout<<" - Pollution constantly increases over time, your city is in a forest so the trees will absorb some of the pollution, building structures removes 50 trees \n";
     cout<<" - You loose if the population reaches 0 or if the pollution reaches a value greater than 500 \n";
     cout<<" - You aren't in charge of housing \n";
@@ -334,7 +334,7 @@ void construire()
         cout<<" # Do you want to build anything else?(Y/N) \n > ";
         char repeat;
         cin>>repeat;
-        toupper(repeat);
+        repeat=toupper(repeat);
         if(repeat=='N')
             construction=0;
 
@@ -463,10 +463,10 @@ int main()
 {
     short diff;
     cout<<" # Choose a difficulty \n 1.Trivial \n - Trees decrease pollution faster \n - Pollution decreases automatically over time \n - You get free money from the government \n - No random events \n - For the weak \n";
-    cout<<"2. Easy \n - Trees decrease pollution faster \n - No natural disasters \n - No extreme random events \n - recommended if u don't know what your doing \n";
-    cout<<"3. Medium \n - The game as intended \n - No extreme random events \n";
+    cout<<"2. Easy \n - Trees decrease pollution faster \n - No natural disasters \n - recommended if u don't know what your doing \n";
+    cout<<"3. Medium \n - The game as intended \n";
     cout<<"4. Hard \n - Trees decrease pollution slower \n - Citizens are unhappier \n - More random events \n - The government steals money from you \n - For those looking for a challenge \n";
-    cout<<"5. Extreme \n - Pollution can't decrease \n - Citizens are way unhappier \n - More extreme events \n - The Government steals money from you \n - For experts at resource managment \n > ";
+    cout<<"5. Extreme \n - Pollution can't decrease \n - Citizens are way unhappier \n - Way more random events \n - The Government steals money from you \n - For experts at resource managment \n > ";
     bool ok=1;
     while(ok)
     {
