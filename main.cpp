@@ -485,8 +485,9 @@ int main()
         joc(diff);
         cout<<" # Play again?(Y/N)? \n > ";
         char tryAgian;
-        toupper(tryAgian);
+
         cin>>tryAgian;
+        tryAgian = toupper(tryAgian);
         if(tryAgian=='N')
         {
             cout<<" # Thank you for playing! \n # Game made by Sebastian Balan for Unihack 2024";
